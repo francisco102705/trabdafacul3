@@ -21,7 +21,7 @@ header > div{
 
 #logo {
     position: absolute;
-    top: 2%;
+    top: 10%;
     left: 50%; /* Posição inicial no centro horizontal */
     transform: translateX(-50%); /* Centralizar horizontalmente */
     width: 20%;
@@ -42,6 +42,7 @@ header > div{
     }
 }
 
+  
 
 
 
@@ -55,7 +56,7 @@ header {
     background-color:blue;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 50px 0;
     background-image: url(img/sea-waves-blue-water-wallpaper-preview.jpg);
     height: 45vh;
     background-size: cover;
@@ -70,25 +71,51 @@ header {
 nav {
     background-color:skyblue ;
     color: #fff;
+    text-align: center;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 10px 0;
-    padding-left: 15px;
+    padding:  0px;
+    
     
    
 }
 
 nav li {
     display: inline;
-    margin-right: 60px;
+    margin-right: 20px;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
 }
+
+nav a:hover {
+    color: #23238E; /* Cor diferente ao passar o mouse */
+  }
+  
+  /* Estilos para o botão animado */
+  .animated-button {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-button a {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+  }
+  
+  .animated-button:hover a {
+    transform: translateY(-10px); /* Deslocamento para cima quando o botão é destacado */
+  }
 
 main {
     padding: 20px;
@@ -135,4 +162,20 @@ button:hover {
 
 footer{
     text-align: center;
+}
+
+
+
+
+/* Estilos para o layout responsivo dos produtos */
+@media (min-width: 769px) {
+    .product {
+        /* Remova as regras para flexibilidade e largura máxima */
+        flex: none;
+        max-width: none;
+    }
+
+    .product:last-child {
+        margin-right: 0; /* Remova a margem direita do último produto para evitar quebrar a linha */
+    }
 }
