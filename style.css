@@ -21,10 +21,10 @@ header > div{
 
 #logo {
     position: absolute;
-    top: 10%;
+    top: 2%;
     left: 50%; /* Posição inicial no centro horizontal */
     transform: translateX(-50%); /* Centralizar horizontalmente */
-    width: 19%;
+    width: 20%;
     max-width: 300px;
 }
 
@@ -35,7 +35,12 @@ header > div{
     border-radius: 50%;
 }
 
-
+@media (max-width: 768px) {
+    #logo {
+        width: 50%; /* Aumente a largura da logo para 50% */
+        max-width: 200px; /* Largura máxima da logo para telas menores */
+    }
+}
 
 
 
